@@ -122,7 +122,7 @@ a {
   z-index: -2;
   background:
     linear-gradient(90deg, rgba(24, 32, 29, 0.72), rgba(24, 32, 29, 0.34) 46%, rgba(247, 243, 235, 0.9) 72%),
-    url("https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1800&q=80") center/cover;
+    url("assets/work/irrigation-sprinkler.jpg") center/cover;
 }
 
 .hero::after {
@@ -362,6 +362,69 @@ h3 {
   font-weight: 800;
 }
 
+.portfolio-link {
+  display: inline-flex;
+  min-height: 50px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+  padding: 13px 22px;
+  border: 1px solid rgba(255, 250, 242, 0.34);
+  border-radius: 999px;
+  color: var(--white);
+  font-weight: 900;
+}
+
+.work-hero {
+  display: grid;
+  min-height: 520px;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 430px);
+  gap: clamp(28px, 6vw, 86px);
+  align-items: end;
+  padding: clamp(92px, 13vw, 160px) clamp(18px, 4vw, 52px) clamp(56px, 8vw, 96px);
+  background: var(--ink);
+  color: var(--white);
+}
+
+.work-hero h1 {
+  max-width: 980px;
+  margin-bottom: 0;
+}
+
+.work-hero p:not(.eyebrow) {
+  margin: 0;
+  color: rgba(255, 250, 242, 0.78);
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.gallery-section {
+  padding: clamp(46px, 7vw, 92px) clamp(18px, 4vw, 52px);
+}
+
+.work-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.work-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.work-card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.work-card figcaption {
+  padding: 18px;
+  color: var(--muted);
+  font-weight: 800;
+}
+
 .timeline {
   display: grid;
   max-width: 1180px;
@@ -496,7 +559,7 @@ h3 {
   .hero-image {
     background:
       linear-gradient(180deg, rgba(24, 32, 29, 0.72), rgba(24, 32, 29, 0.42) 50%, rgba(247, 243, 235, 0.96)),
-      url("https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1300&q=80") center/cover;
+      url("assets/work/irrigation-sprinkler.jpg") center/cover;
   }
 
   .hero-panel {
@@ -508,13 +571,19 @@ h3 {
   .timeline,
   .contact,
   .section-heading,
-  .portfolio-grid {
+  .portfolio-grid,
+  .work-hero,
+  .work-gallery {
     grid-template-columns: 1fr;
   }
 
   .project.large,
   .project {
     min-height: 420px;
+  }
+
+  .work-card img {
+    height: 420px;
   }
 }
 
@@ -541,7 +610,9 @@ h3 {
 
   .section,
   .contact,
-  .testimonial {
+  .testimonial,
+  .work-hero,
+  .gallery-section {
     padding-inline: 16px;
   }
 
@@ -552,5 +623,9 @@ h3 {
 
   .site-footer {
     display: grid;
+  }
+
+  .work-card img {
+    height: 320px;
   }
 }
